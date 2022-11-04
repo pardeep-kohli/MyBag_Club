@@ -1,20 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import react from 'react'
+import {  View } from 'react-native';
+import Gothrough1 from './src/screens/Gothrough1';
+import Gothrough2 from "./src/screens/Gothrough2"
+import Gothrough3 from './src/screens/Gothrough3';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View>
+      {/* <Gothrough1 /> */}
+      {/* <Gothrough2/> */}
+      <Gothrough3/>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
