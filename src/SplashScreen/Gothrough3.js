@@ -9,7 +9,7 @@ export default function Gothrough3() {
           <Text style={{ fontSize: 20 }}>3</Text>
         </View>
         <View>
-          <Text style={{ fontSize: 20 }}>Skip</Text>
+          <Text style={{ fontSize: 10 }}>Skip</Text>
         </View>
       </View>
       <View style={{ }}>
