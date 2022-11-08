@@ -2,7 +2,7 @@ import { View, Text ,Image,StyleSheet} from 'react-native'
 import React from 'react'
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
-
+import { heightPercentageToDP as hp,widthPercentageToDP as wp } from 'react-native-responsive-screen';
 export default function Header() {
   return (
     <View style={styles.parent}>
@@ -15,7 +15,7 @@ export default function Header() {
       </View>
       <View>
         <Image
-          style={{ height: 47, width: 43 }}
+          style={{ height:hp(8), width:hp(8) }}
           source={require("../images/logo.png")}
         />
       </View>
@@ -29,11 +29,10 @@ const styles = StyleSheet.create({
   parent: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginHorizontal: 10,
-   
+    padding:10,
     borderBottomWidth: 1,
     borderColor: "#DADADA",
-    height:70,
+    //height:80,
     alignItems:'center'
   },
 });

@@ -6,7 +6,7 @@ export default function Login({ navigation }) {
     <View>
       <Button
         title="navigate to the next screen"
-        onPress={() => navigation.navigate("Login")}
+        onPress={() => navigation.navigate("Signup")}
       />
       <Text>Signup</Text>
     </View>

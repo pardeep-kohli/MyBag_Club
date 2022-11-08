@@ -1,25 +1,22 @@
-import react from 'react'
-import {  View } from 'react-native';
-import Gothrough1 from './src/SplashScreen/Gothrough1';
-import Gothrough2 from "./src/SplashScreen/Gothrough2"
-import Gothrough3 from './src/SplashScreen/Gothrough3';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Signup from './src/SplashScreen/Signup';
-import Login from './src/SplashScreen/Login';
-import Home from './src/Screens/Home';
-
+import react from "react";
+import { View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import Signup from "./src/SplashScreen/SignupN";
+import Login from "./src/Screens/Login";
+import Home from "./src/Screens/Home";
+import { Gothrough1, Gothrough2, Gothrough3 } from "./src/SplashScreen";
 
 export default function App() {
-  // const Stack = createNativeStackNavigator(); 
+  const Stack = createStackNavigator();
   return (
     // <NavigationContainer>
-    //   <Stack.Navigator initialRouteName='Login'>
+    //   <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown:false}}>
+    //     <Stack.Screen name="Home" component={Home} />
     //     <Stack.Screen name="Login" component={Login} />
     //     <Stack.Screen name="Signup" component={Signup} />
     //   </Stack.Navigator>
     // </NavigationContainer>
-    <View>
-      <Home/>
-    </View>
-  );}
+    <Login/>
+  );
+}
