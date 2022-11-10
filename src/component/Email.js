@@ -1,19 +1,12 @@
 import React from "react";
 import { View, Text, TextInput, StyleSheet } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
-const Email = () => {
+const Email = ({icon,placeholder}) => {
   return (
     <View style={styles.TextBox}>
-      <View style={styles.icon}>
-        <FontAwesome
-          style={{ paddingTop: 7 }}
-          name="envelope"
-          size={15}
-          color="grey"
-        />
-      </View>
+      <View style={styles.icon}>{icon}</View>
       <View style={{ flex: 6 }}>
-        <TextInput style={styles.Text} placeholder="Email" />
+        <TextInput style={styles.Text} placeholder={placeholder} />
       </View>
     </View>
   );

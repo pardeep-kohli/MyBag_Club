@@ -9,29 +9,44 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
-
+import { FontAwesome } from "@expo/vector-icons";
 export default function Login() {
   return (
-    <View>
+    <View style={{flex:1}}>
       <StatusBar backgroundColor={color.violet} />
-      <View style={{ marginLeft: 30 }}>
+      <View style={{ marginLeft: 20}}>
         <BackButton />
       </View>
       <View>
         <Text style={styles.text}>Log in to your account</Text>
       </View>
-      <Email />
-      <View style={styles.TextBox}>
-        <View style={styles.icon}>
-          <Entypo name="lock" size={15} color="grey" />
-        </View>
-        <View style={{ flex: 6, justifyContent: "center" }}>
-          <TextInput style={styles.Text} placeholder="Password" />
-        </View>
-      </View>
+      <Email
+        icon={
+          <FontAwesome
+            style={{ paddingTop: 7 }}
+            name="envelope"
+            size={15}
+            color="grey"
+          />
+        }
+        placeholder="Email"
+      />
+      <Email
+        icon={
+          <Entypo
+            style={{ paddingTop: 7 }}
+            name="lock"
+            size={15}
+            color="grey"
+          />
+        }
+        placeholder='Password'
+      />
+
+      
       <View style={{ flexDirection: "row", justifyContent: "flex-end" }}>
         <View style={{}}></View>
-        <View style={{ paddingTop: 10, marginRight: 20, paddingBottom: 20 }}>
+        <View style={{ paddingTop: 10, marginRight: 30, paddingBottom: 20 }}>
           <Text style={{ color: "grey" }}>Forgot Password?</Text>
         </View>
       </View>
@@ -55,12 +70,13 @@ export default function Login() {
           </TouchableOpacity>
         </View>
       </View>
-      <View style={{flex:1,justifyContent:'flex-end' }}>
+      <View style={{  flex:1 ,flexDirection:'row',justifyContent:'center'}}>
         <Image
-          style={{ height: hp(30), width: hp(30) }}
-          source={require("../images/loginpagepic.png")}
+          style={{ height: hp(40), width: hp(40),alignSelf:"flex-end" }}
+          source={require("../images/logopagesnap.png")}
         />
       </View>
+     
     </View>
   );
 }

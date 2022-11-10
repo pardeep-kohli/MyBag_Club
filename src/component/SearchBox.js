@@ -16,12 +16,7 @@ export default function SearchBox() {
           <TextInput placeholder="Search" />
         </View>
       </View>
-      <View>
-        <Image
-          style={{ }}
-          source={require("../images/loginpagepic.png")}
-        />
-      </View>
+      
     </View>
   );
 }

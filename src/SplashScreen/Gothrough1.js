@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   DescriptionText:{
-    alignItems:'center',
+    alignSelf:'center',
    fontSize:20,
    marginHorizontal:40,
    marginTop:20,
