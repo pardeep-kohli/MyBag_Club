@@ -29,10 +29,11 @@ const styles = StyleSheet.create({
   parent: {
     flexDirection: "row",
     justifyContent: "space-between",
-    padding:10,
-    borderBottomWidth: 1,
+   borderBottomWidth:1,
     borderColor: "#DADADA",
-    //height:80,
-    alignItems:'center'
+    // height:80,
+    alignItems:'center',
+    padding:10,
+    
   },
 });

@@ -6,7 +6,7 @@ import Signup from "./src/SplashScreen/SignupN";
 import Login from "./src/Screens/Login";
 import Home from "./src/Screens/Home";
 import { Gothrough1, Gothrough2, Gothrough3 } from "./src/SplashScreen";
-import CreateAccount from "./src/Screens/CreateAccount";
+import SignUp from "./src/Screens/SignUp";
 import ForgetPassword from "./src/Screens/ForgetPassword";
 import ForgetPassword2 from "./src/Screens/ForgetPassword2";
 import ResetPassword from "./src/Screens/ResetPassword";
@@ -21,9 +21,10 @@ export default function App() {
     //   </Stack.Navigator>
     // </NavigationContainer>
     // <Login/>
-    // <CreateAccount/>
+    // <SignUp/>
     // <ForgetPassword/>
     // <ForgetPassword2/>
-    <ResetPassword/>
+    // <ResetPassword/>
+    <Home/>
   );
 }

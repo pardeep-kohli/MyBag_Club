@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, TextInput, StyleSheet } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
-const Email = ({icon,placeholder}) => {
+const Email = ({ icon, placeholder }) => {
   return (
     <View style={styles.TextBox}>
       <View style={styles.icon}>{icon}</View>
-      <View style={{ flex: 6 }}>
+      <View style={{ paddingVertical:5}}>
         <TextInput style={styles.Text} placeholder={placeholder} />
       </View>
     </View>
@@ -14,26 +14,23 @@ const Email = ({icon,placeholder}) => {
 const styles = StyleSheet.create({
   TextBox: {
     flexDirection: "row",
-
-    marginHorizontal: 30,
     borderWidth: 1,
-
     borderColor: "grey",
     marginTop: 20,
-    height: 40,
-    position: "relative",
+    width:'100%',
 
+    // justifyContent: "center",
     borderRadius: 8,
   },
   icon: {
-    flex: 1,
-
+    width:"12%",
+    alignItems: "center",
     borderRightWidth: 1,
     borderRightColor: "grey",
-    alignItems: "center",
+    justifyContent:'center',
   },
   Text: {
-    paddingTop: 3,
+    
     paddingLeft: 10,
   },
 });

@@ -9,7 +9,7 @@ import VioletButton from '../component/VioletButton';
 
 export default function ForgetPassword2() {
   return (
-    <View style={{paddingHorizontal:15}}>
+    <View style={{ paddingHorizontal: 15, borderBottomWidth:1}}>
       <StatusBar backgroundColor={color.violet} />
       <View style={{ alignSelf: "center", paddingTop: 30 }}>
         <Image
@@ -28,7 +28,7 @@ export default function ForgetPassword2() {
           We have sent a password recovery instruction to your email.
         </Text>
       </Text>
-      <View style={{paddingTop:10}}>
+      <View style={{ paddingTop: 10 }}>
         <VioletButton buttonName="OKAY" />
       </View>
     </View>
