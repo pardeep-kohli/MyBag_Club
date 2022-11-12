@@ -10,6 +10,8 @@ import SignUp from "./src/Screens/SignUp";
 import ForgetPassword from "./src/Screens/ForgetPassword";
 import ForgetPassword2 from "./src/Screens/ForgetPassword2";
 import ResetPassword from "./src/Screens/ResetPassword";
+import Heading from "./src/component/Heading";
+import Categories from "./src/Screens/Categories";
 export default function App() {
   const Stack = createStackNavigator();
   return (
@@ -25,6 +27,8 @@ export default function App() {
     // <ForgetPassword/>
     // <ForgetPassword2/>
     // <ResetPassword/>
-    <Home/>
+    // <Home/>
+    // <Heading HeadLine="On Sale"/>
+    <Categories/>
   );
 }
