@@ -70,14 +70,14 @@ export default function Home() {
               CategoryName="Women's Heels"
               OldPrice="$45"
               NewPrice="$56"
-              imageSrc={require("../images/demoPic.png")}
+              imageSrc={require("../images/Demo_pic.png")}
             />
             <MyBagClubCard
               Description="Women's Heels"
               CategoryName="AFFINITI for Wm B Woods US 10AAAA ..."
               OldPrice="$45"
               NewPrice="$56"
-              imageSrc={require("../images/demoPic.png")}
+              imageSrc={require("../images/Demo_pic.png")}
             />
           </View>
           <View style={styles.ShowAll}>
@@ -96,14 +96,15 @@ export default function Home() {
               CategoryName="Women's Heels"
               OldPrice="$45"
               NewPrice="$56"
-              imageSrc={require("../images/demoPic.png")}
-            />
+              imageSrc={require("../images/Demo_pic.png")}
+              />
             <MyBagClubCard
               Description="Women's Heels"
               CategoryName="AFFINITI for Wm B Woods US 10AAAA ..."
               OldPrice="$45"
               NewPrice="$56"
-              imageSrc={require("../images/demoPic.png")}
+              imageSrc={require("../images/Demo_pic.png")}
+
             />
           </View>
           <View style={styles.ShowAll}>
@@ -122,14 +123,14 @@ export default function Home() {
               CategoryName="Women's Heels"
               OldPrice="$45"
               NewPrice="$56"
-              imageSrc={require("../images/demoPic.png")}
-            />
+              imageSrc={require("../images/Demo_pic.png")}
+              />
             <MyBagClubCard
               Description="Women's Heels"
               CategoryName="AFFINITI for Wm B Woods US 10AAAA ..."
               OldPrice="$45"
               NewPrice="$56"
-              imageSrc={require("../images/demoPic.png")}
+              imageSrc={require("../images/Demo_pic.png")}
             />
           </View>
           <View style={styles.ShowAll}>

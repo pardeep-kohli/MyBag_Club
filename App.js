@@ -11,7 +11,10 @@ import ForgetPassword from "./src/Screens/ForgetPassword";
 import ForgetPassword2 from "./src/Screens/ForgetPassword2";
 import ResetPassword from "./src/Screens/ResetPassword";
 import Heading from "./src/component/Heading";
+import Filter from "./src/Screens/Filter";
 import Categories from "./src/Screens/Categories";
+
+import DetailedScreen from "./src/Screens/DetailedScreen";
 export default function App() {
   const Stack = createStackNavigator();
   return (
@@ -29,6 +32,8 @@ export default function App() {
     // <ResetPassword/>
     // <Home/>
     // <Heading HeadLine="On Sale"/>
-    <Categories/>
-  );
+    // <Categories/>
+    // <Filter/>
+    <DetailedScreen/>
+);
 }

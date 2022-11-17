@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     width: "45%",
     borderRadius: 10,
-    marginTop: 40,
+    marginTop: 20,
   },
   OldPrice: {
     textDecorationLine: "line-through",
