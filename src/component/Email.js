@@ -5,7 +5,7 @@ const Email = ({ icon, placeholder }) => {
   return (
     <View style={styles.TextBox}>
       <View style={styles.icon}>{icon}</View>
-      <View style={{ paddingVertical:5}}>
+      <View style={{ paddingVertical:5,borderWidth:1,width:'80%'}}>
         <TextInput style={styles.Text} placeholder={placeholder} />
       </View>
     </View>

@@ -6,6 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "android":{
+      "softwareKeyboardLayoutMode": "pan"
+    },
     "splash": {
       "image": "./assets/MyBagClubSplash.png",
       "resizeMode": "contain",

@@ -6,11 +6,13 @@ import {
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 import VioletButton from '../component/VioletButton';
+import BackButton from '../component/Backbutton';
 
-export default function ForgetPassword2() {
+export default function ForgetPassword2({navigation}) {
   return (
-    <View style={{ paddingHorizontal: 15, borderBottomWidth:1}}>
+    <View style={{ paddingHorizontal: 15}}>
       <StatusBar backgroundColor={color.violet} />
+      <BackButton onPress={()=>navigation.goBack()}/>
       <View style={{ alignSelf: "center", paddingTop: 30 }}>
         <Image
           style={{ height: hp(40), width: hp(40) }}
@@ -29,7 +31,7 @@ export default function ForgetPassword2() {
         </Text>
       </Text>
       <View style={{ paddingTop: 10 }}>
-        <VioletButton buttonName="OKAY" />
+        <VioletButton buttonName="OKAY" onPress={()=>navigation.navigate("ResetPassword")}/>
       </View>
     </View>
   );

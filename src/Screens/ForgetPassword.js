@@ -1,4 +1,4 @@
-import { View, Text,StatusBar,Image,StyleSheet } from 'react-native'
+import { View, Text,StatusBar,Image,StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import color from '../theme/color';
 import {
@@ -8,10 +8,12 @@ import {
 import Email from '../component/Email';
 import { FontAwesome } from "@expo/vector-icons";
 import VioletButton from "../component/VioletButton";
-
-export default function ForgetPassword() {
+import BackButton from '../component/Backbutton';
+import Input from '../component/inputs/Input';
+export default function ForgetPassword({navigation}) {
   return (
-    <View style={{paddingHorizontal:15}}>
+    <ScrollView style={{paddingHorizontal:15}}>
+       <BackButton onPress={()=>navigation.goBack()}/>
       <StatusBar backgroundColor={color.violet} />
       <View style={{ alignSelf: "center", paddingTop: 30 }}>
         <Image
@@ -22,33 +24,22 @@ export default function ForgetPassword() {
       <View style={{ alignItems: "center", marginTop: 20 }}>
         <Text style={styles.heading}>Forget Password?</Text>
       </View>
-      <Text
+      <View
         style={{
-          flexWrap: "wrap",
-          textAlign: "center",
-          justifyContent: "center",
+         
           marginTop: 10,
+          width:'100%'
         }}
       >
-        <Text style={{ fontSize: 19 }}>
+        <Text style={{ fontSize: 19 ,marginBottom:20,textAlign:'center'}}>
           Enter the email address associated with your account
         </Text>
-      </Text>
-      <Email
-        icon={
-          <FontAwesome
-            style={{ paddingTop: 7 }}
-            name="envelope"
-            size={15}
-            color="grey"
-          />
-        }
-        placeholder="Email"
-      />
-      <View style={{ paddingVertical:40 }}>
-        <VioletButton buttonName="SEND" />
       </View>
-    </View>
+      <Input iconName={"email"} placeholder={"Email"} />
+      <View style={{ paddingVertical:40 }}>
+        <VioletButton buttonName="SEND" onPress={()=>navigation.navigate("ForgetPassword2")}/>
+      </View>
+    </ScrollView>
   );
 }
 const styles=StyleSheet.create({

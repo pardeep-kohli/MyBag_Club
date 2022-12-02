@@ -1,4 +1,4 @@
-import { View, Text, StatusBar,StyleSheet,Image } from 'react-native'
+import { View, Text, StatusBar,StyleSheet,Image, ScrollView } from 'react-native'
 import React from 'react'
 import color from '../theme/color';
 import {
@@ -7,10 +7,14 @@ import {
 } from "react-native-responsive-screen";
 import UserInput from '../component/UserInput';
 import VioletButton from '../component/VioletButton';
-export default function ResetPassword() {
+import BackButton from '../component/Backbutton';
+import Input2 from '../component/inputs/Input2';
+export default function ResetPassword({navigation}) {
   return (
-    <View style={{paddingHorizontal:10}}>
+    <View style={{paddingHorizontal:10,flex:1}}>
+      <BackButton onPress={()=>navigation.goBack()}/>
       <StatusBar backgroundColor={color.violet} />
+      <ScrollView style={{paddingHorizontal:15}}>
       <View style={{alignSelf:'center',paddingTop:40}}>
         <Image
           style={{ height: hp(30), width: hp(30)  }}
@@ -23,15 +27,12 @@ export default function ResetPassword() {
       <Text style={styles.description}>
         <Text>Enter your new password below</Text>
       </Text>
-      <View>
-        <UserInput placeholder="New Password" />
-      </View>
-      <View style={{ paddingTop: 20 }}>
-        <UserInput placeholder="Confirm password" />
-      </View>
+     <Input2 label={"Password"} placeholder="Enter Password" />
+     <Input2 label={"Confirm Password"} placeholder="Confirm Password"/>
       <View style={{paddingVertical:30,alignItems:'center'}}>
-        <VioletButton buttonName="CREATE" />
+        <VioletButton buttonName="CREATE" onPress={()=>navigation.navigate("Login")}/>
       </View>
+      </ScrollView>
     </View>
   );
 }
