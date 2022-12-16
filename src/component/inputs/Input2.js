@@ -114,7 +114,8 @@ const styles = StyleSheet.create({
   },
   label_style:{
     color:color.grey,
-    marginBottom:5
+    marginBottom:5,
+    fontFamily:'Regular'
   },
   star:{
     color:color.red

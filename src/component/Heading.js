@@ -1,5 +1,6 @@
 import { View, Text,StyleSheet } from 'react-native'
 import React from 'react'
+import color from '../theme/color';
 
 export default function Heading({HeadLine}) {
   return (
@@ -10,7 +11,7 @@ export default function Heading({HeadLine}) {
 }
 const styles = StyleSheet.create({
   HeadLine: {
-    backgroundColor: "#4C5669",
+    backgroundColor:color.darkGrey,
     paddingHorizontal:15,
     paddingVertical:6,
 
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "white",
-    fontWeight: "bold",
+ fontFamily:'Bold',
     fontSize:15,
   },
 });

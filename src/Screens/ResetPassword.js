@@ -21,15 +21,15 @@ export default function ResetPassword({navigation}) {
           source={require("../images/resetPassword.png")}
         />
       </View>
-      <View>
+      
         <Text style={styles.heading}>Create new password</Text>
-      </View>
+      
       <Text style={styles.description}>
         <Text>Enter your new password below</Text>
       </Text>
      <Input2 label={"Password"} placeholder="Enter Password" />
      <Input2 label={"Confirm Password"} placeholder="Confirm Password"/>
-      <View style={{paddingVertical:30,alignItems:'center'}}>
+      <View style={{paddingVertical:30}}>
         <VioletButton buttonName="CREATE" onPress={()=>navigation.navigate("Login")}/>
       </View>
       </ScrollView>
@@ -40,9 +40,10 @@ const styles = StyleSheet.create({
   heading: {
     textAlign: "center",
     fontSize: 20,
-    fontWeight: "bold",
-    paddingTop: 20,
-    color: "#4C5669",
+    
+    paddingTop: 30,
+    color:color.darkGrey,
+    fontFamily:'Bold'
   },
 
   description: {
@@ -50,7 +51,8 @@ const styles = StyleSheet.create({
     fontSize: 17,
     textAlign: "center",
     padding: 10,
-    marginBottom: 30,
-    paddingBottom: 20,
+    marginBottom: 20,
+    paddingBottom: 10,
+    fontFamily:'Regular',
   },
 });

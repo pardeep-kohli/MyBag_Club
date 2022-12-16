@@ -1,16 +1,24 @@
-import { View, Text, StatusBar, Image, StyleSheet,ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  StatusBar,
+  Image,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 import color from "../theme/color";
 import Header from "../component/Header.js";
 import SearchBox from "../component/SearchBox.js";
 
-import {
-  heightPercentageToDP as hp,
-  widthPercentageToDP as wp,
-} from "react-native-responsive-screen";
+import { heightPercentageToDP as hp } from "react-native-responsive-screen";
 import Heading from "../component/Heading";
 import MyBagClubCard from "../component/MyBagClubCard";
-export default function Home() {
+import { FontAwesome } from "@expo/vector-icons";
+import MyBagCardSmall from "../component/MyBagCardSmall";
+
+export default function Home({ navigation }) {
   return (
     <ScrollView>
       <View>
@@ -61,81 +69,131 @@ export default function Home() {
           <View
             style={{
               flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "space-around",
+              justifyContent: "space-between",
+              marginHorizontal: 10,
             }}
           >
-            <MyBagClubCard
-              Description="AFFINITI for Wm B Woods US 10AAAA ..."
-              CategoryName="Women's Heels"
-              OldPrice="$45"
-              NewPrice="$56"
-              imageSrc={require("../images/Demo_pic.png")}
+            <FontAwesome
+              style={{ alignSelf: "center" }}
+              name="angle-left"
+              size={24}
+              color="black"
             />
-            <MyBagClubCard
-              Description="Women's Heels"
-              CategoryName="AFFINITI for Wm B Woods US 10AAAA ..."
-              OldPrice="$45"
-              NewPrice="$56"
-              imageSrc={require("../images/Demo_pic.png")}
+
+            <View style={styles.CardView}>
+              <MyBagCardSmall
+                Description="AFFINITI for Wm B Woods US 10AAAA ..."
+                CategoryName="Women's Heels"
+                OldPrice="$45"
+                NewPrice="$56"
+                imageSrc={require("../images/MyBagCard/MyBagCard.png")}
+              />
+              <MyBagCardSmall
+                CategoryName="Women's Heels"
+                Description="AFFINITI for Wm B Woods US 10AAAA ..."
+                OldPrice="$45"
+                NewPrice="$56"
+                imageSrc={require("../images/MyBagCard/MyBagCard.png")}
+              />
+            </View>
+            <FontAwesome
+              style={{ alignSelf: "center" }}
+              name="angle-right"
+              size={24}
+              color="black"
             />
           </View>
-          <View style={styles.ShowAll}>
-            <Text>Show All</Text>
-          </View>
+          <TouchableOpacity>
+            <View style={styles.ShowAll}>
+              <Text style={styles.Touchableshow}>Show All</Text>
+            </View>
+          </TouchableOpacity>
           <Heading HeadLine="RECOMMENDED" />
           <View
             style={{
               flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "space-around",
+              justifyContent: "space-between",
+              marginHorizontal: 10,
             }}
           >
-            <MyBagClubCard
-              Description="AFFINITI for Wm B Woods US 10AAAA ..."
-              CategoryName="Women's Heels"
-              OldPrice="$45"
-              NewPrice="$56"
-              imageSrc={require("../images/Demo_pic.png")}
-              />
-            <MyBagClubCard
-              Description="Women's Heels"
-              CategoryName="AFFINITI for Wm B Woods US 10AAAA ..."
-              OldPrice="$45"
-              NewPrice="$56"
-              imageSrc={require("../images/Demo_pic.png")}
+            <FontAwesome
+              style={{ alignSelf: "center" }}
+              name="angle-left"
+              size={24}
+              color="black"
+            />
 
+            <View style={styles.CardView}>
+              <MyBagCardSmall
+                Description="AFFINITI for Wm B Woods US 10AAAA ..."
+                CategoryName="Women's Heels"
+                OldPrice="$45"
+                NewPrice="$56"
+                imageSrc={require("../images/MyBagCard/MyBagCard.png")}
+              />
+              <MyBagCardSmall
+                CategoryName="Women's Heels"
+                Description="AFFINITI for Wm B Woods US 10AAAA ..."
+                OldPrice="$45"
+                NewPrice="$56"
+                imageSrc={require("../images/MyBagCard/MyBagCard.png")}
+              />
+            </View>
+            <FontAwesome
+              style={{ alignSelf: "center" }}
+              name="angle-right"
+              size={24}
+              color="black"
             />
           </View>
-          <View style={styles.ShowAll}>
-            <Text>Show All</Text>
-          </View>
+          <TouchableOpacity>
+            <View style={styles.ShowAll}>
+              <Text style={styles.Touchableshow}>Show All</Text>
+            </View>
+          </TouchableOpacity>
+
           <Heading HeadLine="DISCOUNT OFFER" />
           <View
             style={{
               flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "space-around",
+              justifyContent: "space-between",
+              marginHorizontal: 10,
             }}
           >
-            <MyBagClubCard
-              Description="AFFINITI for Wm B Woods US 10AAAA ..."
-              CategoryName="Women's Heels"
-              OldPrice="$45"
-              NewPrice="$56"
-              imageSrc={require("../images/Demo_pic.png")}
+            <FontAwesome
+              style={{ alignSelf: "center" }}
+              name="angle-left"
+              size={24}
+              color="black"
+            />
+            <View style={styles.CardView}>
+              <MyBagCardSmall
+                Description="AFFINITI for Wm B Woods US 10AAAA ..."
+                CategoryName="Women's Heels"
+                OldPrice="$45"
+                NewPrice="$56"
+                imageSrc={require("../images/MyBagCard/MyBagCard.png")}
               />
-            <MyBagClubCard
-              Description="Women's Heels"
-              CategoryName="AFFINITI for Wm B Woods US 10AAAA ..."
-              OldPrice="$45"
-              NewPrice="$56"
-              imageSrc={require("../images/Demo_pic.png")}
+              <MyBagCardSmall
+                CategoryName="Women's Heels"
+                Description="AFFINITI for Wm B Woods US 10AAAA ..."
+                OldPrice="$45"
+                NewPrice="$56"
+                imageSrc={require("../images/MyBagCard/MyBagCard.png")}
+              />
+            </View>
+            <FontAwesome
+              style={{ alignSelf: "center" }}
+              name="angle-right"
+              size={24}
+              color="black"
             />
           </View>
-          <View style={styles.ShowAll}>
-            <Text>Show All</Text>
-          </View>
+          <TouchableOpacity>
+            <View style={styles.ShowAll}>
+              <Text style={styles.Touchableshow}>Show All</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </ScrollView>
@@ -143,39 +201,50 @@ export default function Home() {
 }
 const styles = StyleSheet.create({
   text: {
-    fontWeight: "bold",
+    fontFamily: "ExtraBold",
     fontSize: 15,
     marginTop: 20,
+    marginHorizontal: 15,
   },
   categories: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     paddingVertical: 10,
-    paddingHorizontal:15,
+    paddingHorizontal: 15,
   },
   imageView: {
     borderWidth: 1,
-    height: 74,
-    width: 74,
+    height: 72,
+    width: 72,
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 37,
-    borderColor: "#781C45",
+    borderRadius: 36,
+    borderColor: color.violet,
   },
   image: {
-    height: hp(6),
-    width: hp(6),
+    height: hp(4),
+    width: hp(4),
   },
   TextView: {
     fontSize: 8,
-    fontWeight: "bold",
+    fontFamily: "Bold",
+    textAlign: "center",
+    paddingTop: 3,
   },
-  ShowAll:{
-  flexDirection: "row",
-  justifyContent: "flex-end",
-  paddingHorizontal: 15,
-  paddingTop: 10,
-  paddingBottom: 30,
-  }
+  ShowAll: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    paddingHorizontal: 15,
+    paddingTop: 10,
+    paddingBottom: 30,
+  },
+  CardView: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+  },
+  Touchableshow: {
+    fontFamily: "Regular",
+  },
 });

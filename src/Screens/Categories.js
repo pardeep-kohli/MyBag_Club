@@ -1,11 +1,11 @@
-import { View, Text, StatusBar ,StyleSheet} from 'react-native'
+import { View, Text, StatusBar ,StyleSheet,ScrollView} from 'react-native'
 import React from 'react'
 import Header from '../component/Header'
 import color from '../theme/color';
 import CategoryHeading from '../component/CategoryHeading.js';
 import SearchBox from '../component/SearchBox';
 import MyBagClubCard from '../component/MyBagClubCard';
-import { ScrollView } from 'react-native-gesture-handler';
+
 
 export default function Categories() {
   return (
@@ -13,7 +13,7 @@ export default function Categories() {
       <ScrollView>
       <StatusBar backgroundColor={color.violet} />
       <Header />
-      <CategoryHeading CategoryName="SHOES AND SANDALS" number="80" />
+      <CategoryHeading CategoryName="SHOES AND SANDALS" number="(80)" />
       <SearchBox/>
       <View style={styles.cardView}>
         <MyBagClubCard

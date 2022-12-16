@@ -1,7 +1,7 @@
-import { View, Text,StyleSheet ,Image,ScrollView} from 'react-native'
-import React from 'react'
-
-
+import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
+import React from "react";
+import color from "../theme/color";
+import { heightPercentageToDP as hp } from "react-native-responsive-screen";
 export default function MyBagClubCard({
   Description,
   CategoryName,
@@ -11,29 +11,26 @@ export default function MyBagClubCard({
 }) {
   return (
     <View style={styles.parent}>
-      <View style={{}}>
+      <View>
         <Image
-          style={{ position: "absolute", left: 0, top: 4 ,height:20,width:20}}
+          style={styles.SaleTag}
           source={require("../images/Salelogo.png")}
         />
       </View>
       <View>
         <Image
-          style={{ height: 140, width: 110, alignSelf: "center" }}
+          style={{ height: hp(16), width: hp(14), alignSelf: "center" }}
           source={imageSrc}
         />
       </View>
-      <Text>Category:{CategoryName}</Text>
-      <Text>{Description}</Text>
+      <View>
+        <Text numberOfLines={1} style={styles.Category}>Category:{CategoryName}</Text>
+        <Text numberOfLines={2} style={styles.Description}>{Description}</Text>
+      </View>
       <View style={styles.price}>
-        <View>
-          <Text style={styles.OldPrice}>{OldPrice}</Text>
-        </View>
-        <View>
-          <Text style={{ color: "#781C45", fontWeight: "bold" }}>
-            {NewPrice}
-          </Text>
-        </View>
+        <Text style={styles.OldPrice}>{OldPrice}</Text>
+
+        <Text style={styles.NewPrice}>{NewPrice}</Text>
       </View>
     </View>
   );
@@ -42,9 +39,12 @@ const styles = StyleSheet.create({
   price: {
     flexDirection: "row",
     justifyContent: "space-between",
+    paddingVertical: 5,
+   
   },
   parent: {
-    paddingHorizontal: 5,
+    paddingHorizontal: 10,
+    paddingVertical:8 ,
     borderWidth: 1,
     width: "45%",
     borderRadius: 10,
@@ -52,5 +52,26 @@ const styles = StyleSheet.create({
   },
   OldPrice: {
     textDecorationLine: "line-through",
+    fontFamily: "Regular",
   },
+  NewPrice: {
+    color: color.violet,
+    fontFamily: "Bold",
+  },
+  Category: {
+    color: color.grey,
+    fontFamily: "SemiBold",
+    fontSize: 8,
+    paddingBottom: 5,
+  },
+  Description: {
+    fontFamily: "Regular",
+  },
+  SaleTag:{
+  position: "absolute",
+  left: 0,
+  top: 0,
+  height: hp(4),
+  width: hp(4),
+  }
 });

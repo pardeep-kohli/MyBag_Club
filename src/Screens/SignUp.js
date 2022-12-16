@@ -51,7 +51,7 @@ export default function SignUp({ navigation }) {
 }
 const styles = StyleSheet.create({
   heading: {
-    fontWeight: "bold",
+   fontFamily:'Bold',
     fontSize: 21,
     marginLeft: 15,
     marginTop: 20,

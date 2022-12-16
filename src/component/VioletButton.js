@@ -6,7 +6,7 @@ export default function VioletButton({ buttonName,onPress }) {
   return (
       <TouchableOpacity onPress={onPress} style={styles.button} activeOpacity={0.5}>
     <View >
-        <Text style={{ color: "white", fontWeight: "bold" }}>{buttonName}</Text>
+        <Text style={{ color: "white", fontFamily:'Bold'}}>{buttonName}</Text>
     </View>
       </TouchableOpacity>
   );

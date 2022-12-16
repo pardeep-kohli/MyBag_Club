@@ -17,6 +17,6 @@ const styles = StyleSheet.create({
     paddingVertical:10,
   },
   CategoryName: {
-    fontWeight:'bold',
+   fontFamily:'Bold'
   },
 });

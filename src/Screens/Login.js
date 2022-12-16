@@ -22,6 +22,7 @@ import {
 } from "react-native-responsive-screen";
 import { FontAwesome } from "@expo/vector-icons";
 import Input from "../component/inputs/Input";
+
 export default function Login({navigation}) {
   const [isKeyboardVisible, setKeyboardVisible] = useState(false);
 
@@ -56,9 +57,9 @@ export default function Login({navigation}) {
       <Input iconName={"email"} placeholder={"Email"}/>
       <Input iconName={"lock"} placeholder={"Password"} />
       <View style={{ flexDirection: "row", justifyContent: "flex-end" }}>
-        <View style={{}}></View>
+      
         <TouchableOpacity onPress={()=>navigation.navigate("ForgetPassword")} style={{ paddingTop: 10, paddingBottom: 20 }}>
-          <Text style={{ color: "grey" }}>Forgot Password?</Text>
+          <Text style={styles.ForgetPassword}>Forgot Password?</Text>
         </TouchableOpacity>
       </View>
       <View style={{ alignItems: "center" }}>
@@ -66,7 +67,7 @@ export default function Login({navigation}) {
       </View>
       <View style={styles.SignUpOption}>
         <View>
-          <Text>Don't have an account</Text>
+          <Text styles={{fontFamily:'Regular'}}>Don't have an account</Text>
         </View>
         <View>
           <TouchableOpacity onPress={()=>navigation.navigate("SignUp")}>
@@ -93,8 +94,8 @@ export default function Login({navigation}) {
 const styles = StyleSheet.create({
   text: {
     fontSize: 20,
-    fontWeight: "bold",
-    color: "#4C5669",
+    fontFamily:'Bold',
+    color:color.darkGrey,
     marginVertical: 20,
   },
   icon: {
@@ -118,7 +119,7 @@ const styles = StyleSheet.create({
   },
   text2: {
     color: color.violet,
-    fontWeight: "bold",
+   fontFamily:'Bold',
   },
   SignUpOption: {
     flexDirection: "row",
@@ -132,5 +133,10 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     position: "absolute",
     bottom: 0,
+  },
+  
+  ForgetPassword:{
+    color:color.darkGrey,
+    fontFamily:'Regular',
   },
 });
