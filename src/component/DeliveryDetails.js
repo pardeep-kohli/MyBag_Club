@@ -5,12 +5,12 @@ export default function DeliveryDetails({ UserName, place, Address }) {
   return (
     <View>
       <View style={styles.parent}>
-        <Text style={styles.text}>
+        <Text style={styles.userDetail}>
           {place},{UserName}
         </Text>
         <View style={styles.radioButton}></View>
       </View>
-      <View style={styles.textView}>
+      <View style={styles.InnerView}>
       <Text style={styles.Address}>{Address}</Text>
       </View>
     </View>
@@ -21,9 +21,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     paddingVertical:15,
+    paddingHorizontal:10,
   },
-  text: {
+  userDetail: {
     flexWrap: "wrap",
+    fontFamily:'Bold',
   },
   radioButton: {
     height: hp(2.6),
@@ -33,10 +35,13 @@ const styles = StyleSheet.create({
   },
   Address:{
     fontFamily:'Regular',
-    backgroundColor:'red',
+  
     
   },
-  textView:{
+  InnerView:{
+    paddingRight:30,
+    paddingLeft:10,
+    // backgroundColor:'red',
     
   }
 });

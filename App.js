@@ -29,6 +29,9 @@ import Categories from "./src/Screens/Categories";
 import RecentlyViewed from "./src/Screens/RecentlyViewed";
 import WishList from "./src/Screens/Favourite";
 import Favourite from "./src/Screens/Favourite";
+import Gothrough1 from "./src/SplashScreen/Gothrough1"
+import Gothrough2 from "./src/SplashScreen/Gothrough2";
+import Gothrough3 from "./src/SplashScreen/Gothrough3";
 export default function App() {
   const Stack = createStackNavigator();
   useEffect(() => {
@@ -37,15 +40,16 @@ export default function App() {
   return (
     <NavigationContainer>
        <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown:false}}> 
-          <Stack.Screen name="Account" component={Account} />
-        {/* <Stack.Screen name="Login" component={Login} /> */}
-        {/* <Stack.Screen name="SignUp" component={SignUp} /> */}
-        {/* <Stack.Screen name="ForgetPassword" component={ForgetPassword} /> */}
-        {/* <Stack.Screen name="ForgetPassword2" component={ForgetPassword2} /> */}
-        {/* <Stack.Screen name="ResetPassword" component={ResetPassword} />  */}
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
+        <Stack.Screen name="ForgetPassword2" component={ForgetPassword2} />
+          <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="ResetPassword" component={ResetPassword} /> 
         {/* <Stack.Screen name="BottomNavigation" component={BottomNavigation} />  */}
-         {/* <Stack.Screen name="FilterList" component={BottomNavigation} />   */}
-          {/* <Stack.Screen name="WishList" component={WishList} />    */}
+          
+
+
       </Stack.Navigator> 
      
     </NavigationContainer>

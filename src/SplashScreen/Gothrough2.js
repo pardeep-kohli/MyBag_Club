@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import React from "react";
 import color from "../theme/color";
+import { heightPercentageToDP as hp } from "react-native-responsive-screen";
 export default function Gothrough2() {
   return (
     <View>
@@ -12,16 +13,16 @@ export default function Gothrough2() {
           <Text style={{ fontSize: 20 }}>Skip</Text>
         </View>
       </View>
-      <View style={{ alignItems: "center" }}>
+      <View style={{ alignItems: "center" ,justifyContent:'center'}}>
         <Image
           style={styles.image}
-          source={require("../images/ShopThousand.png")}
+          source={require("../images/splashscreen/goThrough2.png")}
         />
       </View>
-      <View style={{ alignSelf: "center", width: 200}}>
+      <View style={{ alignSelf: "center", marginTop:50,width:hp(30)}}>
         <Text style={styles.text}>SHOP THOUSAND OF PRODUCT</Text>
       </View>
-      <View style={{ alignItems: "center" }}>
+      <View style={{marginHorizontal:10}}>
         <Text style={styles.DescriptionText}>
           Once you tell us where you are, we'll show you only products that are
           available to you today. Otherwise, you see stuff you can't have, and
@@ -46,22 +47,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   image: {
-    height: 228,
-    width: 270,
+    height: hp(28),
+    width: hp(45),
     marginTop: 40,
   },
   text: {
     color: color.violet,
-    fontWeight: "bold",
+   fontFamily:"Bold",
     fontSize: 20,
-    marginHorizontal: 10,
+    
+    
     textAlign: "center",
   },
   DescriptionText: {
-    alignItems: "center",
+   textAlign:'center',
     fontSize: 20,
-    marginHorizontal: 40,
+    paddingHorizontal:10,
     marginTop: 20,
-    fontWeight: "400",
+  fontFamily:'Regular',
+  // backgroundColor:'red',
   },
 });

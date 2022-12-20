@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import React from "react";
 import color from "../theme/color";
+import { heightPercentageToDP as hp } from "react-native-responsive-screen";
 export default function Gothrough3() {
   return (
     <View>
@@ -12,11 +13,10 @@ export default function Gothrough3() {
           <Text style={{ fontSize: 10 }}>Skip</Text>
         </View>
       </View>
-      <View style={{ }}>
+      <View style={{alignItems:'center',justifyContent:'center',marginTop:40}}>
         <Image
           style={styles.image}
-          source={require("../images/Gothrough3.png")}
-        />
+          source={require("../images/splashscreen/goThrough3.png")}/>
       </View>
       <View style={{ alignItems: "center", marginTop: 50 }}>
         <Text style={styles.text}>WE'LL DELIVER. YOU ENJOY!</Text>
@@ -45,21 +45,22 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   image: {
-    height: 228,
-    width: 259,
-    marginTop: 40,
+    height: hp(30),
+    width: hp(45),
+    // marginTop: 40,
   },
   text: {
     color: color.violet,
-    fontWeight: "bold",
+    fontFamily:'Bold',
     fontSize: 20,
-    alignItems: "center",
+    textAlign:'center',
   },
   DescriptionText: {
-    alignItems: "center",
+  
     fontSize: 20,
     marginHorizontal: 40,
     marginTop: 20,
-    fontWeight: "400",
+   fontFamily:'Regular',
+    textAlign:'center',
   },
 });

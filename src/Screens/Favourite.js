@@ -1,32 +1,56 @@
-import { View, Text, StatusBar } from 'react-native'
+import { View, Text, StatusBar,StyleSheet } from 'react-native'
 import React from 'react'
 import color from '../theme/color'
+
+
+import CategoryHeading from '../component/CategoryHeading'
+import MyBagClubCard from '../component/MyBagClubCard'
 import Header from '../component/Header'
-import Categories from './Categories'
-import PriceAndRating from '../component/PriceAndRating'
 export default function Favourite() {
   return (
     <View>
     <StatusBar backgroundColor={color.violet}/>
-   
-    <Categories CategoryName="WISHLIST"/>
-      <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-        <PriceAndRating
-          AprroxRating="100+ Ratings"
-          SizeDescription="Women's Shoes US 10"
-          Price="$46"
-          Time="90 min"
-          Rating="4.1"
+   <Header/>
+    <CategoryHeading CategoryName="WISHLIST"/>
+    <View style={styles.cardView}>
+        <MyBagClubCard
+          Description="AFFINITI for Wm B Woods US 10AAAA ..."
+          CategoryName="Women's Heels"
+          OldPrice="$45"
+          NewPrice="$56"
+          imageSrc={require("../images/Demo_pic.png")}
         />
-         <PriceAndRating
-          AprroxRating="100+ Ratings"
-          SizeDescription="Women's Shoes US 10"
-          Price="$46"
-          Time="90 min"
-          Rating="4.1"
+        <MyBagClubCard 
+          Description="AFFINITI for Wm B Woods US 10AAAA ..."
+          CategoryName="Women's Heels"
+          OldPrice="$45"
+          NewPrice="$56"
+          imageSrc={require("../images/Demo_pic.png")}
         />
-        </View>
-
+        <MyBagClubCard 
+          Description="AFFINITI for Wm B Woods US 10AAAA ..."
+          CategoryName="Women's Heels"
+          OldPrice="$45"
+          NewPrice="$56"
+          imageSrc={require("../images/Demo_pic.png")}
+        />
+        <MyBagClubCard 
+          Description="AFFINITI for Wm B Woods US 10AAAA ..."
+          CategoryName="Women's Heels"
+          OldPrice="$45"
+          NewPrice="$56"
+          imageSrc={require("../images/Demo_pic.png")}
+        />
+</View>
     </View>
   )
 }
+const styles=StyleSheet.create({
+  cardView:{
+    flexDirection:'row',
+   flexWrap:'wrap',
+   justifyContent:'space-around',
+   paddingHorizontal:10,
+   marginTop:10,
+  }
+})

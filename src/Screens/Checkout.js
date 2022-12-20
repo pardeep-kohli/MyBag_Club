@@ -8,6 +8,7 @@ import VioletButton from "../component/VioletButton";
 import DeliveryDetails from "../component/DeliveryDetails";
 import ResetButton from "../component/ResetButton";
 import BottomButton from "../component/BottomButton";
+import { heightPercentageToDP as hp } from "react-native-responsive-screen";
 export default function Checkout() {
   return (
     <View style={{ flex: 1 }}>
@@ -33,7 +34,7 @@ export default function Checkout() {
           Address={
             "J326 Dakshinpuri new delhi 110062  j Block dakshinpuri ambedkar nagar sec 5 , Near Kali building school"
           }
-          UserName={"fjkfkd"}
+          UserName={"Deepak"}
           place={"home"}
         />
       </View>
@@ -41,9 +42,8 @@ export default function Checkout() {
       <View>
         <VioletButton buttonName={"CONTINUE"} />
         <ResetButton/>
-       <View>       <BottomButton/>
-       </View>
- 
+      
+       
       </View>
     </View>
   );
@@ -55,8 +55,8 @@ const styles=StyleSheet.create({
     innerView:{
         justifyContent:'center',
         alignItems:'center',
-        paddingHorizontal:40,
-        paddingVertical:20,
+        width:'50%',
+        paddingVertical:hp(2),
         borderWidth:1,
     }
 })

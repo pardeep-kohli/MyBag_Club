@@ -4,7 +4,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { WishList,Account,Recent,MyOrder,Home } from "../../src/Screens/bottom";
 
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialCommunityIcons, Entypo } from "@expo/vector-icons";
+import { Image,StyleSheet } from "react-native";
+import { heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 const ClientTab = createBottomTabNavigator();
 export default function BottomNavigation() {
@@ -22,7 +24,7 @@ export default function BottomNavigation() {
         options={{
           tabBarLabel: "Home",
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" size={24} color={color} />
+            <MaterialCommunityIcons name="home" size={30} color={color} />
           ),
         }}
       />
@@ -33,7 +35,8 @@ export default function BottomNavigation() {
         options={{
           tabBarLabel: "WishList",
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" size={24} color={color} />
+            <MaterialCommunityIcons name="bookmark" size={30} color={color} />
+
 
           ),
         }}
@@ -45,7 +48,7 @@ export default function BottomNavigation() {
         options={{
           tabBarLabel: "MyOrder",
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" size={24} color={color} />
+            <Entypo name="back-in-time" size={28} color={color} />
 
           ),
         }}
@@ -57,7 +60,7 @@ export default function BottomNavigation() {
         options={{
           tabBarLabel: "Account ",
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" size={24} color={color} />
+            <MaterialCommunityIcons name="cart" size={30} color={color} />
 
           ),
         }}
@@ -69,7 +72,7 @@ export default function BottomNavigation() {
         options={{
           tabBarLabel: "Recent",
           tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="home" size={24} color={color} />
+            <MaterialCommunityIcons name="account" size={30} color={color} />
 
           ),
         }}
@@ -77,3 +80,9 @@ export default function BottomNavigation() {
     </ClientTab.Navigator>
   );
 }
+const styles=StyleSheet.create({
+  icon_image:{
+    height:hp(4),
+    width:hp(4),
+  }
+})

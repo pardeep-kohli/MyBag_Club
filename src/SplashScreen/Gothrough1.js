@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, Image } from "react-native";
 import React from "react";
 import color from "../theme/color";
+import { heightPercentageToDP as hp } from "react-native-responsive-screen";
 export default function Gothrough1() {
   return (
     <View>
@@ -13,10 +14,10 @@ export default function Gothrough1() {
         </View>
       </View>
       <View style={{ alignItems: "center" }}>
-        <Image style={styles.image} source={require("../images/Address.png")} />
+        <Image style={styles.image} source={require("../images/splashscreen/goThrough1.png")} />
       </View>
       <View style={{ alignItems: "center", marginTop: 50 }}>
-        <Text style={styles.text}>ENTER YOUR ADDRESS</Text>
+        <Text style={styles.Heading}>ENTER YOUR ADDRESS</Text>
       </View>
 
       <Text style={styles.DescriptionText}>
@@ -42,22 +43,22 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   image: {
-    height: 228,
-    width: 259,
+   height:hp(40),
+   width:hp(40),
     marginTop: 40,
   },
-  text: {
+  Heading: {
     color: color.violet,
-    fontWeight: "bold",
+    fontFamily:'Bold',
     fontSize: 20,
     alignItems: "center",
   },
   DescriptionText:{
-    alignSelf:'center',
+    textAlign:'center',
    fontSize:20,
    marginHorizontal:40,
    marginTop:20,
-   fontWeight:'400',
+  fontFamily:'Regular',
     
   }
 });

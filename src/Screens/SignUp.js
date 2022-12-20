@@ -31,6 +31,11 @@ export default function SignUp({ navigation }) {
           <Input2 label={"Email"} compulsory placeholder="Enter Email" />
           <Input2 label={"Phone"} compulsory placeholder="Enter phone number" />
           <Input2
+            label={"Password"}
+            compulsory
+            placeholder="Password"
+          />
+          <Input2
             label="Address"
             multiline={true}
             numberOfLines={7}
